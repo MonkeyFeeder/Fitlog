@@ -1,25 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+import { Container } from 'react-bootstrap';
+
+import Header from './components/header/header.component';
+import CreateWorkoutLog from './components/create-workout-log/create-workout-log.component';
+import WorkoutLog from './components/workout-log/workout-log.component';
+
+const App = () => {
+  const [workoutLogId, setId] = useState('');
+
+  const handleLogCreation = (workoutId) => {
+    setId(workoutId);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Container>
+          <Switch>
+            <Route exact path="/">
+              <CreateWorkoutLog handleLogCreation={handleLogCreation} />
+            </Route>
+            <Route exact path={`/:id`}>
+              <WorkoutLog  />
+            </Route>
+          </Switch>
+        </Container>
+      </div>
+    </Router>
   );
 }
 

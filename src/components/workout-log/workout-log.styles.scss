@@ -1,0 +1,51 @@
+.workout-log {
+    .option-bar {
+        display: flex;
+        justify-content: center;
+
+        #createExercise,
+        #addExercise,
+        #addWorkout {
+            position: relative;
+            padding: 12px 20px;
+            background-color: #ff7f51;
+            border: 1px solid #ff7f51;
+            border-radius: 4px;
+            color: #fff;
+            margin: 0 10px;
+            cursor: pointer;
+
+            .modal-exercise {
+                background-color: #ff7f51;
+                -webkit-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.75);
+                position: absolute;
+                left: 50%;
+                top: 110%;
+                transform: translate(-50%);
+                width: 250px;
+                padding: 20px;
+
+                &.hidden {
+                    display: none;
+                }
+
+                .classic-input {
+                    margin-bottom: 0;
+                }
+
+                input {
+                    width: 100%;
+                }
+
+                select {
+                    margin: 10px 0;
+                    width: 80%;
+                    height: 30px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
