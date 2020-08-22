@@ -1,0 +1,44 @@
+.item-exercise {
+    padding: 20px 20px 0;
+
+    &:last-child {
+        padding-bottom: 20px;
+    }
+
+    h3.name {
+        margin: 5px 0;
+        color: #ff7f51;
+    }
+
+    hr {
+        background-color: #ff7f51;
+        border: none;
+        height: 1px;
+    }
+
+    .exercise-meta {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0 10px;
+    }
+
+    .add-new-set {
+        .fields {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 5px;
+
+            input {
+                background: none;
+                border: none;
+                border-bottom: 1px solid #ff7f51;
+                width: 13%;
+            }
+        }
+
+        .classic-button {
+            margin: 0;
+        }
+    }
+}

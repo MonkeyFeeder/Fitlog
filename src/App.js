@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,12 +14,6 @@ import CreateWorkoutLog from './components/create-workout-log/create-workout-log
 import WorkoutLog from './components/workout-log/workout-log.component';
 
 const App = () => {
-  const [workoutLogId, setId] = useState('');
-
-  const handleLogCreation = (workoutId) => {
-    setId(workoutId);
-  }
-
   return (
     <Router>
       <div className="App">
@@ -27,7 +21,7 @@ const App = () => {
         <Container>
           <Switch>
             <Route exact path="/">
-              <CreateWorkoutLog handleLogCreation={handleLogCreation} />
+              <CreateWorkoutLog />
             </Route>
             <Route exact path={`/:id`}>
               <WorkoutLog  />

@@ -21,7 +21,6 @@ const CreateWorkoutLog = ({ handleLogCreation }) => {
     const workoutLogId = await createNewWorkoutLog(title);
     
     setId(workoutLogId);
-    handleLogCreation(workoutLogId);
     setHidden(false);
   }
 

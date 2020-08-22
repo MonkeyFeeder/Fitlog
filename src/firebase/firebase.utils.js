@@ -42,7 +42,18 @@ export const getWorkoutLogData = async (id) => {
   if(!id) {return};
   const workoutLogSnapshot = await firestore.collection('workoutLogs').doc(id).collection('workouts').get();
 
-  return workoutLogSnapshot;
+  let workouts = [];
+
+  workoutLogSnapshot.docs.forEach(doc => {
+    const itemWorkout = {
+      id: doc.id,
+      date: doc.data().date,
+      workout: doc.data()
+    }
+    workouts.push(itemWorkout);
+  });
+
+  return workouts;
 }
 
 export const getAllWorkouts = async (id) => {
@@ -69,8 +80,68 @@ export const getAllExercises = async (id) => {
 
 export const newWorkout = async (id) => {
   await firestore.collection('workoutLogs').doc(id).collection('workouts').doc().set({date: Date.now()});
+}
 
-  console.log('done');
+export const addExerciseToWorkout = async (idWorkout, nameExercise, idUser) => {
+  if(!idWorkout || !nameExercise) {return};
+
+  await firestore.collection('workoutLogs').doc(idUser).collection('workouts').doc(idWorkout).collection('exercises').doc(nameExercise).set({name: nameExercise});
+}
+
+export const getWorkoutData = async (userId, idWorkout) => {
+  if(!idWorkout) {return}
+
+  let workoutExercisesData = [];
+
+  const workoutExercises = await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(idWorkout).collection('exercises').get();
+
+  workoutExercises.docs.forEach(async doc => {
+    workoutExercisesData.push(doc.data());
+    // const name = doc.data().name;
+    // const workoutExercisesDetails = await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(idWorkout).collection('exercises').doc(name).
+  });
+
+
+
+  return workoutExercisesData;
+}
+
+export const addNewSet = async (userId, workoutId, name, setNotation) => {
+  if(userId && workoutId && name !== '' && setNotation !== '') {
+    await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(workoutId).collection('exercises').doc(name).update({
+      sets: firebase.firestore.FieldValue.arrayUnion(setNotation)
+    })
+  }
+}
+
+export const getSetsByExercise = async (userId, workoutId, name) => {
+  if(userId && workoutId && name !== '') {
+    const sets = await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(workoutId).collection('exercises').doc(name).get();
+    if(sets.data().sets) {
+      let setList = []
+      sets.data().sets.forEach(set => {
+        const splitSet = set.split(/\+|=/);
+        // console.log(splitSet);
+        // if(splitSet.length === 2) {
+        //   setList.push({
+        //     numberset: splitSet[0],
+        //     weight: splitSet[1],
+        //     reps: splitSet[2]
+        //   })
+        // } else 
+        console.log(splitSet);
+        if (splitSet.length === 4) {
+          setList.push({
+            numberset: splitSet[0],
+            weight: splitSet[1],
+            reps: splitSet[2],
+            volume: splitSet[3]
+          })
+        }
+      })
+      return setList;
+    }
+  }
 }
 
 firebase.initializeApp(config);

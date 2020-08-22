@@ -1,0 +1,83 @@
+.item-workout {
+    background-color: white;
+    box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.75);
+    margin-top: 20px;
+    position: relative;
+
+    .top-bar {
+        background-color: #ff7f51;
+        display: flex;
+        padding-left: 20px;
+
+        p.date {
+            margin: 5px 0;
+            color: white;
+        }
+    }
+
+    .add-exercise-icon {
+        max-width: 100%;
+        width: 50px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid #ff7f51;
+        border-radius: 50%;
+    }
+
+    .box {
+        display: none;
+
+        select {
+            background-color: #ff7f51;
+            color: white;
+            padding: 5px;
+            width: auto;
+            border: none;
+            font-size: 16px;
+            -webkit-appearance: button;
+            appearance: button;
+            outline: none;
+
+            &::before {
+                content: "\f13a";
+                font-family: FontAwesome;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20%;
+                height: 100%;
+                text-align: center;
+                font-size: 28px;
+                line-height: 45px;
+                color: rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.1);
+                pointer-events: none;
+            }
+
+            option {
+                padding: 30px;
+            }
+        }
+
+        .classic-button {
+            padding: 6px 20px;
+            border-radius: 0;
+            color: #fff;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        &.opened {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .add-exercise {
+        display: flex;
+    }
+
+    
+      
+}
