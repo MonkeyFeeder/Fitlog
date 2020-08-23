@@ -57,6 +57,9 @@ const ItemWorkout = ({ workoutData, date, idWorkout }) => {
             <div className="top-bar">
                 <p className="date">{displayedDate}</p>
 
+                {
+                    // console.log(itemWorkoutData)
+                }
                 {/* To add : Total volume ? */}
             </div>
             <div className="add-exercise">
@@ -83,8 +86,8 @@ const ItemWorkout = ({ workoutData, date, idWorkout }) => {
                 // })
                 // : 'No exercises yet'
                 Object.keys(itemWorkoutData).map(item => {
-                    const {name} = itemWorkoutData[item];
-                    return <ItemExercise key={item} name={name} workoutId={idWorkout} />
+                    const {name, sets} = itemWorkoutData[item];
+                    return <ItemExercise key={item} name={name} sets={sets} workoutId={idWorkout} fetchItemWorkoutData={fetchItemWorkoutData} />
                 })
             }
         </div>

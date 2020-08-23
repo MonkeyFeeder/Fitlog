@@ -8,21 +8,22 @@ import './item-exercise.styles.scss';
 import ItemSet from '../item-set/item-set.component.jsx';
 import ClassicButton from '../classic-button/classic-button.component';
 
-import { addNewSet, getSetsByExercise } from '../../firebase/firebase.utils';
+import { addNewSet } from '../../firebase/firebase.utils';
 
-const ItemExercise = ({ name, workoutId, ...otherProps }) => {
+const ItemExercise = ({ name, sets, workoutId, fetchItemWorkoutData, ...otherProps }) => {
     let {id} = useParams();
-    // const [totalVolume, setTotalVolume] = useState('');
+    const [totalVolume, setTotalVolume] = useState('');
     const [newSet, setNewSet] = useState({
         weight: '',
         reps: '',
         numberset: '',
     });
-    const [setList, setSetList] = useState([]);
+    // const [setList, setSetList] = useState([]);
 
     const handleAddNewSet = async () => {
         const setNotation = `${newSet.numberset}=${newSet.weight}+${newSet.reps}+${newSet.weight * newSet.reps}`;
         await addNewSet(id, workoutId, name, setNotation);
+        await fetchItemWorkoutData(id, workoutId);
 
         setNewSet({
             ...newSet,
@@ -41,29 +42,27 @@ const ItemExercise = ({ name, workoutId, ...otherProps }) => {
         })
     }
 
-    const fetchSets = async (id, workoutId, name) => {
-        const sets = await getSetsByExercise(id, workoutId, name);
-        setSetList(sets);
+    const calculateExerciseVolume = () => {
+        if(sets) {
+            let volume = 0;
+            sets.forEach(set => {
+                const deconstructedSet = set.split(/\+|=/);
+                volume = volume + parseInt(deconstructedSet[3]);
+            })
+            setTotalVolume(volume);
+        }
     }
 
-    // const calculateExerciseVolume = () => {
-    //     if(setList) {
-    //         let volume = 0;
-    //         setList.forEach(set => {
-    //             volume = volume + set.volume;
-    //         })
-    //         setTotalVolume(volume);
-    //     }
-    // }
-
     useEffect(() => {
-        fetchSets(id, workoutId, name);
-    }, [id, name, workoutId, newSet])
+        calculateExerciseVolume();
+    }, [sets])
 
     return (
         <div className="item-exercise" {...otherProps} >
-            <div>
+            <div className="top-bar">
                 <h3 className="name">{name}</h3>
+
+                <span>{totalVolume}</span>
             </div>
             <hr />
             <div className="exercise-meta">
@@ -72,10 +71,11 @@ const ItemExercise = ({ name, workoutId, ...otherProps }) => {
                 <span>Reps</span>
             </div>
             {
-                setList ?
-                setList.map(set => {
-                    const { numberset, weight, reps } = set;
-                    return <ItemSet key={numberset} weight={weight} reps={reps} numberset={numberset} />
+                sets ?
+                sets.map(set => {
+                    const deconstructedSet = set.split(/\+|=/);
+                    // setTotalVolume(totalVolume + deconstructedSet[3]);
+                    return <ItemSet key={deconstructedSet[0]} weight={deconstructedSet[1]} reps={deconstructedSet[2]} numberset={deconstructedSet[0]} />
                 })
                 : null
             }

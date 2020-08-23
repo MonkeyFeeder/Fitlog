@@ -129,7 +129,6 @@ export const getSetsByExercise = async (userId, workoutId, name) => {
         //     reps: splitSet[2]
         //   })
         // } else 
-        console.log(splitSet);
         if (splitSet.length === 4) {
           setList.push({
             numberset: splitSet[0],
