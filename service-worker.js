@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Fitlog/precache-manifest.d17d87325fb668d85bd150b1b509d9f4.js"
+  "/Fitlog/precache-manifest.ce5313e6e8bdec71ab33251228219d95.js"
 );
 
 self.addEventListener('message', (event) => {
