@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab1a1ea0a5ac8e7b3815303a458101b2",
+    "revision": "6d2ee40c0b6923cfa235d37e5c0db398",
     "url": "/Fitlog/index.html"
   },
   {
-    "revision": "5f1bc352699a6a7df327",
+    "revision": "976e797b2925c3a10b29",
     "url": "/Fitlog/static/css/main.528b30b7.chunk.css"
   },
   {
-    "revision": "929511fe258473896ce6",
-    "url": "/Fitlog/static/js/2.cbb86418.chunk.js"
+    "revision": "0a341795ccaead78df39",
+    "url": "/Fitlog/static/js/2.294c81af.chunk.js"
   },
   {
     "revision": "544111c69119227bbf075a65771ccdb1",
-    "url": "/Fitlog/static/js/2.cbb86418.chunk.js.LICENSE.txt"
+    "url": "/Fitlog/static/js/2.294c81af.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5f1bc352699a6a7df327",
-    "url": "/Fitlog/static/js/main.004eb69c.chunk.js"
+    "revision": "976e797b2925c3a10b29",
+    "url": "/Fitlog/static/js/main.1302203f.chunk.js"
   },
   {
     "revision": "2f26efd1369b4f583bb5",
