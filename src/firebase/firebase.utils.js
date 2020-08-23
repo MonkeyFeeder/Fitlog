@@ -108,9 +108,14 @@ export const getWorkoutData = async (userId, idWorkout) => {
 
 export const addNewSet = async (userId, workoutId, name, setNotation) => {
   if(userId && workoutId && name !== '' && setNotation !== '') {
+
     await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(workoutId).collection('exercises').doc(name).update({
       sets: firebase.firestore.FieldValue.arrayUnion(setNotation)
     })
+    const deconstructedSet = setNotation.split(/\+|=/);
+    await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(workoutId).collection('exercises').doc(name).set({
+      volume: firebase.firestore.FieldValue.increment(parseInt(deconstructedSet[3]))
+    }, { merge: true })
   }
 }
 
