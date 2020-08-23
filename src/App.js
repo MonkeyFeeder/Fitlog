@@ -20,10 +20,10 @@ const App = () => {
         <Header />
         <Container>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/Fitlog">
               <CreateWorkoutLog />
             </Route>
-            <Route exact path={`/:id`}>
+            <Route exact path={`/Fitlog/:id`}>
               <WorkoutLog  />
             </Route>
           </Switch>
