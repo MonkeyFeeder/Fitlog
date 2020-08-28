@@ -52,6 +52,10 @@ export const getWorkoutLogData = async (id) => {
     }
     workouts.push(itemWorkout);
   });
+  
+  workouts.sort(function(a, b) {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  })
 
   return workouts;
 }
@@ -101,8 +105,6 @@ export const getWorkoutData = async (userId, idWorkout) => {
     // const workoutExercisesDetails = await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(idWorkout).collection('exercises').doc(name).
   });
 
-
-
   return workoutExercisesData;
 }
 
@@ -126,14 +128,6 @@ export const getSetsByExercise = async (userId, workoutId, name) => {
       let setList = []
       sets.data().sets.forEach(set => {
         const splitSet = set.split(/\+|=/);
-        // console.log(splitSet);
-        // if(splitSet.length === 2) {
-        //   setList.push({
-        //     numberset: splitSet[0],
-        //     weight: splitSet[1],
-        //     reps: splitSet[2]
-        //   })
-        // } else 
         if (splitSet.length === 4) {
           setList.push({
             numberset: splitSet[0],
@@ -146,6 +140,43 @@ export const getSetsByExercise = async (userId, workoutId, name) => {
       return setList;
     }
   }
+}
+
+async function asyncForEach(array, callback) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index], index, array);
+  }
+}
+
+export const getVolumesForExercises = async (name, userId) => {
+  const workouts = await firestore.collection('workoutLogs').doc(userId).collection('workouts').get();
+
+  let volumeArray = [];
+
+  await asyncForEach(workouts.docs, async (workout) => {
+    const workoutDocs = await firestore.collection('workoutLogs').doc(userId).collection('workouts').doc(workout.id).collection('exercises').get();
+
+    await asyncForEach(workoutDocs.docs, async (workoutExercise) => {
+      const workoutExerciseData = workoutExercise.data();
+
+      if(workoutExerciseData.name === name) {
+        const workoutData = workout.data();
+
+        const dataToPush = {
+          name: workoutData.date,
+          uv: workoutExerciseData.volume
+        }
+
+        volumeArray.push(dataToPush);
+      }
+    })
+  })
+
+  volumeArray.sort(function(a, b) {
+    return new Date(a.name).getTime() - new Date(b.name).getTime();
+  })
+
+  return volumeArray;
 }
 
 firebase.initializeApp(config);

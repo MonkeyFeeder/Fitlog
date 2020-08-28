@@ -29,6 +29,7 @@ const ItemWorkout = ({ workoutData, date, idWorkout }) => {
     const handleAddExercise = async (workoutId, name, idUser) => {
         addExerciseToWorkout(workoutId, name, idUser);
         fetchItemWorkoutData(id, workoutId);
+        setHiddenAddExercise(!hiddenAddExercise);
     }
 
     const handleChangeSelect = event => {

@@ -55,7 +55,7 @@ const ItemExercise = ({ name, sets, workoutId, fetchItemWorkoutData, ...otherPro
 
     useEffect(() => {
         calculateExerciseVolume();
-    }, [sets])
+    })
 
     return (
         <div className="item-exercise" {...otherProps} >

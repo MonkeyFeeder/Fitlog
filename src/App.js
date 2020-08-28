@@ -11,20 +11,30 @@ import { Container } from 'react-bootstrap';
 
 import Header from './components/header/header.component';
 import CreateWorkoutLog from './components/create-workout-log/create-workout-log.component';
-import WorkoutLog from './components/workout-log/workout-log.component';
+import Home from './pages/home/home.component';
+import ChartPage from './pages/charts-page/charts-page.component.jsx';
+import ResourcesPage from './pages/resources-page/resources-page.component';
 
 const App = () => {
   return (
     <Router>
       <div className="App">
-        <Header />
         <Container>
+          <Route path={`/Fitlog/:id`}>
+            <Header />
+          </Route>
           <Switch>
             <Route exact path="/Fitlog">
               <CreateWorkoutLog />
             </Route>
             <Route exact path={`/Fitlog/:id`}>
-              <WorkoutLog  />
+              <Home />
+            </Route>
+            <Route exact path={`/Fitlog/:id/charts`}>
+              <ChartPage />
+            </Route>
+            <Route exact path={`/Fitlog/:id/resources`}>
+              <ResourcesPage />
             </Route>
           </Switch>
         </Container>

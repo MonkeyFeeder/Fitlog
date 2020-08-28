@@ -1,0 +1,31 @@
+.charts-page {
+    a {
+        padding: 12px 20px;
+        background-color: #ff7f51;
+        border: 1px solid #ff7f51;
+        border-radius: 4px;
+        color: #fff;
+        display: block;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    h1 {
+        color: #ff7f51;
+    }
+    h3 {
+        text-align: center;
+    }
+    select {
+        background-color: #ff7f51;
+        color: white;
+        padding: 5px;
+        width: auto;
+        border: none;
+        font-size: 16px;
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+    }
+}

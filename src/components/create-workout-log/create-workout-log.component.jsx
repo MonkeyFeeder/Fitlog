@@ -32,7 +32,11 @@ const CreateWorkoutLog = ({ handleLogCreation }) => {
 
       {
         !hidden 
-        ? <h2>Access it through <Link to={`/Fitlog/${workoutLogId}`}>this link</Link></h2>
+        ? 
+        <div>
+          <h2>Access it through <Link to={`/Fitlog/${workoutLogId}`}>this link</Link></h2>
+          <p>Important : Add it to your bookmark, or save the link somewhere !</p>
+        </div>
         : null
       }
       
