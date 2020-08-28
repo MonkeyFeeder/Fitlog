@@ -14,6 +14,7 @@ import CreateWorkoutLog from './components/create-workout-log/create-workout-log
 import Home from './pages/home/home.component';
 import ChartPage from './pages/charts-page/charts-page.component.jsx';
 import ResourcesPage from './pages/resources-page/resources-page.component';
+import Footer from './components/footer/footer.component';
 
 const App = () => {
   return (
@@ -37,6 +38,9 @@ const App = () => {
               <ResourcesPage />
             </Route>
           </Switch>
+          <Route path={`/Fitlog/:id`}>
+            <Footer />
+          </Route>
         </Container>
       </div>
     </Router>
