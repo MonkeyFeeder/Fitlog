@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Fitlog/static/css/main.c495ef97.chunk.css",
-    "main.js": "/Fitlog/static/js/main.1288dde2.chunk.js",
-    "main.js.map": "/Fitlog/static/js/main.1288dde2.chunk.js.map",
+    "main.js": "/Fitlog/static/js/main.0ecdda92.chunk.js",
+    "main.js.map": "/Fitlog/static/js/main.0ecdda92.chunk.js.map",
     "runtime-main.js": "/Fitlog/static/js/runtime-main.0c14e6da.js",
     "runtime-main.js.map": "/Fitlog/static/js/runtime-main.0c14e6da.js.map",
     "static/js/2.54a69813.chunk.js": "/Fitlog/static/js/2.54a69813.chunk.js",
     "static/js/2.54a69813.chunk.js.map": "/Fitlog/static/js/2.54a69813.chunk.js.map",
     "index.html": "/Fitlog/index.html",
-    "precache-manifest.7163127ee40f7d3db5ec83fec998fa8e.js": "/Fitlog/precache-manifest.7163127ee40f7d3db5ec83fec998fa8e.js",
+    "precache-manifest.73fb5cdc7e9e2f950fa0e144f5412ecd.js": "/Fitlog/precache-manifest.73fb5cdc7e9e2f950fa0e144f5412ecd.js",
     "service-worker.js": "/Fitlog/service-worker.js",
     "static/css/main.c495ef97.chunk.css.map": "/Fitlog/static/css/main.c495ef97.chunk.css.map",
     "static/js/2.54a69813.chunk.js.LICENSE.txt": "/Fitlog/static/js/2.54a69813.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0c14e6da.js",
     "static/js/2.54a69813.chunk.js",
     "static/css/main.c495ef97.chunk.css",
-    "static/js/main.1288dde2.chunk.js"
+    "static/js/main.0ecdda92.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6869de82e21dc0e1b579cc8e35fb9cae",
+    "revision": "d19f87515a205640dd2d14aa015a9f7f",
     "url": "/Fitlog/index.html"
   },
   {
-    "revision": "e7224aa3472c7b52ca04",
+    "revision": "080ede108fc32931f9a2",
     "url": "/Fitlog/static/css/main.c495ef97.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Fitlog/static/js/2.54a69813.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e7224aa3472c7b52ca04",
-    "url": "/Fitlog/static/js/main.1288dde2.chunk.js"
+    "revision": "080ede108fc32931f9a2",
+    "url": "/Fitlog/static/js/main.0ecdda92.chunk.js"
   },
   {
     "revision": "2f26efd1369b4f583bb5",
