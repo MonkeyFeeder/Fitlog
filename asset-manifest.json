@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Fitlog/static/css/main.c495ef97.chunk.css",
-    "main.js": "/Fitlog/static/js/main.0ecdda92.chunk.js",
-    "main.js.map": "/Fitlog/static/js/main.0ecdda92.chunk.js.map",
-    "runtime-main.js": "/Fitlog/static/js/runtime-main.0c14e6da.js",
-    "runtime-main.js.map": "/Fitlog/static/js/runtime-main.0c14e6da.js.map",
-    "static/js/2.54a69813.chunk.js": "/Fitlog/static/js/2.54a69813.chunk.js",
-    "static/js/2.54a69813.chunk.js.map": "/Fitlog/static/js/2.54a69813.chunk.js.map",
-    "index.html": "/Fitlog/index.html",
-    "precache-manifest.73fb5cdc7e9e2f950fa0e144f5412ecd.js": "/Fitlog/precache-manifest.73fb5cdc7e9e2f950fa0e144f5412ecd.js",
-    "service-worker.js": "/Fitlog/service-worker.js",
-    "static/css/main.c495ef97.chunk.css.map": "/Fitlog/static/css/main.c495ef97.chunk.css.map",
-    "static/js/2.54a69813.chunk.js.LICENSE.txt": "/Fitlog/static/js/2.54a69813.chunk.js.LICENSE.txt"
+    "main.css": "/fitlog-aef73.firebaseapp.com/static/css/main.c495ef97.chunk.css",
+    "main.js": "/fitlog-aef73.firebaseapp.com/static/js/main.fd917762.chunk.js",
+    "main.js.map": "/fitlog-aef73.firebaseapp.com/static/js/main.fd917762.chunk.js.map",
+    "runtime-main.js": "/fitlog-aef73.firebaseapp.com/static/js/runtime-main.5dccea3f.js",
+    "runtime-main.js.map": "/fitlog-aef73.firebaseapp.com/static/js/runtime-main.5dccea3f.js.map",
+    "static/js/2.0f9d12f9.chunk.js": "/fitlog-aef73.firebaseapp.com/static/js/2.0f9d12f9.chunk.js",
+    "static/js/2.0f9d12f9.chunk.js.map": "/fitlog-aef73.firebaseapp.com/static/js/2.0f9d12f9.chunk.js.map",
+    "index.html": "/fitlog-aef73.firebaseapp.com/index.html",
+    "precache-manifest.fec5c55dae037dd364c9fdb1c0c328cc.js": "/fitlog-aef73.firebaseapp.com/precache-manifest.fec5c55dae037dd364c9fdb1c0c328cc.js",
+    "service-worker.js": "/fitlog-aef73.firebaseapp.com/service-worker.js",
+    "static/css/main.c495ef97.chunk.css.map": "/fitlog-aef73.firebaseapp.com/static/css/main.c495ef97.chunk.css.map",
+    "static/js/2.0f9d12f9.chunk.js.LICENSE.txt": "/fitlog-aef73.firebaseapp.com/static/js/2.0f9d12f9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c14e6da.js",
-    "static/js/2.54a69813.chunk.js",
+    "static/js/runtime-main.5dccea3f.js",
+    "static/js/2.0f9d12f9.chunk.js",
     "static/css/main.c495ef97.chunk.css",
-    "static/js/main.0ecdda92.chunk.js"
+    "static/js/main.fd917762.chunk.js"
   ]
 }
