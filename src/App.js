@@ -21,24 +21,24 @@ const App = () => {
     <Router>
       <div className="App">
         <Container>
-          <Route path={`/Fitlog/:id`}>
+          <Route path={`/:id`}>
             <Header />
           </Route>
           <Switch>
-            <Route exact path="/Fitlog">
+            <Route exact path="/">
               <CreateWorkoutLog />
             </Route>
-            <Route exact path={`/Fitlog/:id`}>
+            <Route exact path={`/:id`}>
               <Home />
             </Route>
-            <Route exact path={`/Fitlog/:id/charts`}>
+            <Route exact path={`/:id/charts`}>
               <ChartPage />
             </Route>
-            <Route exact path={`/Fitlog/:id/resources`}>
+            <Route exact path={`/:id/resources`}>
               <ResourcesPage />
             </Route>
           </Switch>
-          <Route path={`/Fitlog/:id`}>
+          <Route path={`/:id`}>
             <Footer />
           </Route>
         </Container>

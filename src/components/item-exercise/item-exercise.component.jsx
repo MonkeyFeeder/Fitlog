@@ -22,8 +22,13 @@ const ItemExercise = ({ name, sets, workoutId, fetchItemWorkoutData, ...otherPro
 
     const handleAddNewSet = async () => {
         const setNotation = `${newSet.numberset}=${newSet.weight}+${newSet.reps}+${newSet.weight * newSet.reps}`;
-        await addNewSet(id, workoutId, name, setNotation);
-        await fetchItemWorkoutData(id, workoutId);
+
+        try{
+            await addNewSet(id, workoutId, name, setNotation);
+            await fetchItemWorkoutData(id, workoutId);
+        } catch(err) {
+            console.log(err);
+        }
 
         setNewSet({
             ...newSet,
@@ -34,7 +39,11 @@ const ItemExercise = ({ name, sets, workoutId, fetchItemWorkoutData, ...otherPro
     }
 
     const handleChangeNewSet = (event) => {
-        const { name, value } = event.target;
+        let { name, value } = event.target;
+
+        if(name === 'weight') {
+            value = value.replace(/,/g, '.');
+        }
 
         setNewSet({
             ...newSet,
@@ -54,7 +63,11 @@ const ItemExercise = ({ name, sets, workoutId, fetchItemWorkoutData, ...otherPro
     }
 
     useEffect(() => {
-        calculateExerciseVolume();
+        try {
+            calculateExerciseVolume();
+        } catch(err) {
+            console.log(err);
+        }
     })
 
     return (

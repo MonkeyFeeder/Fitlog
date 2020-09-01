@@ -21,7 +21,7 @@ const Header = () => {
   return(
     <header>
       <div className="item-nav">
-        <Link to={`/Fitlog/${id}`}>Workout Log</Link>
+        <Link to={`/${id}`}>Workout Log</Link>
       </div>
       <img src={Logo} alt="logo" className="item-nav" />
       <div className="misc item-nav">
@@ -30,8 +30,8 @@ const Header = () => {
           hiddenDropdown ? ''
           : 
           <div className="dropdown">
-            <Link to={`/Fitlog/${id}/charts`}>Charts</Link>
-            <Link to={`/Fitlog/${id}/resources`}>Resources</Link>
+            <Link to={`/${id}/charts`}>Charts</Link>
+            <Link to={`/${id}/resources`}>Resources</Link>
           </div>
         }
       </div>

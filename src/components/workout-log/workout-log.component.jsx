@@ -49,8 +49,12 @@ const WorkoutLog = () => {
   }
 
   const createNewWorkout = (id) => {
-    newWorkout(id);
-    fetchWorkoutData(id);
+    try {
+      newWorkout(id);
+      fetchWorkoutData(id);
+    } catch(err) {
+      console.log(err);
+    }
   }
 
   const fetchWorkoutData = async (id) => {
@@ -64,7 +68,11 @@ const WorkoutLog = () => {
   }
 
   useEffect(() => {
-    fetchWorkoutData(id);
+    try{
+      fetchWorkoutData(id);
+    } catch(err) {
+      console.log(err);
+    }
   }, [id])
 
   return(
