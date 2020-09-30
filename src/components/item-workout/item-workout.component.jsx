@@ -57,10 +57,6 @@ const ItemWorkout = ({ workoutData, date, idWorkout }) => {
         <div className="item-workout">
             <div className="top-bar">
                 <p className="date">{displayedDate}</p>
-
-                {
-                    // console.log(itemWorkoutData)
-                }
                 {/* To add : Total volume ? */}
             </div>
             <div className="add-exercise">

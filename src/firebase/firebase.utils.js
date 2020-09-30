@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 
 var config = {
-  apiKey: "AIzaSyDceFBzE8z3CR_xJwveLaCRsGslWNOd7zo",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "fitlog-aef73.firebaseapp.com",
   databaseURL: "https://fitlog-aef73.firebaseio.com",
   projectId: "fitlog-aef73",
   storageBucket: "fitlog-aef73.appspot.com",
-  messagingSenderId: "105104532718",
-  appId: "1:105104532718:web:13316828b45ce34c67bfff"
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APPID
 };
 
 export const createNewWorkoutLog = async (title) => {

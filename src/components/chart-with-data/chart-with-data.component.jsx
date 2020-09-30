@@ -59,7 +59,7 @@ const ChartWithData = () => {
       </select>
       {
         chartData.length ? 
-        <LineChart width={500} height={200} data={chartData}>
+        <LineChart width={800} height={200} data={chartData}>
             <CartesianGrid stroke="#ccc" />
             <Line type="monotone" dataKey="uv" stroke="#ff7f51" />
             <XAxis dataKey="name" />
