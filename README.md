@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Fitlog's Readme
 
-## Available Scripts
 
-In the project directory, you can run:
+### Intro
 
-### `npm start`
+- I was looking for a good and free workout tracking app that I could access from everywhere, but also one that would enable me to see my progress. 
+- You can start using it in literally 30sec, just input a name and it'll create it, no need for an account !
+- The progress charts can be generated in the Charts page, it'll use the total volume for the selected exercise in each workout.
+- This project is purely a training project. It's my first full, complete, solo and finished project using React and Firebase, and honestly I'm pretty proud of it. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Core Technical Concepts/Inspiration
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- The idea around the unique URL to access your content is from one of those "Everytime you build a Todo list, a puppy dies" kind of article. One of project was ironically a Todo list with a unique URL for each list. The idea was great, so I "stole" it, so the app is de facto crossplatform, sometimes I like working out at home, so I can use the app on my MacBook, or when I'm at the gym, I can use my phone. 
+- I like charts, I like working out, and my main motivation is seeing the numbers go up, and there aren't THAT many apps that feature charts for free, so I decided to do this on my own. It really helps to keep me motivated.
+- It's one of my first project on which I really focused on the design. Sure it's not fancy, but it's efficient, it's not cluttered, and the informations are where they're supposed to be. 
 
-### `npm test`
+### How to use ?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Go to https://fitlog-aef73.firebaseapp.com/
+- Type in the name you want for your workout log
+- Bookmark the link that is given to you ( super important, unless you want to spend your whole time going to your browser history )
+- ???
+- Profit
 
-### `npm run build`
+### TODO
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- There's nothing planned at the moment, I consider it finished, though some new features can be developed if people ask for a specific feature ( I'm so popular I'm overwhelmed by all the messages I receive ), or if I feel like there's something missing. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### What next ?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- mael.landrin@gmail.com
+- LinkedIn : https://www.linkedin.com/in/mael-landrin/
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+#LookingForAJobInManchesterOrLondonUKSoPleaseCallMeIfYouNeedMe
